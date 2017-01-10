@@ -112,7 +112,12 @@ d3.json("nielsentopo.json", function(error, dma) {
     .attr("d", path)
     //.on("click", clicked)
     
-    .on("mouseover", function(d){
+    .on("mouseout", function(d){
+      d3.select(this)
+      .attr("fill", "green")
+    })
+    
+    /*.on("mouseover", function(d){
       d3.select(this)
       .attr("fill", "orange");
 
@@ -132,7 +137,7 @@ d3.json("nielsentopo.json", function(error, dma) {
     .on("mouseout", function(d){
       d3.select(this)
       .attr("fill", defaultFill)
-    })
+    })*/
     
     .attr("opacity", 0.9)
     .attr("fill", defaultFill);
